@@ -38,8 +38,8 @@ public class Main {
 
             try {
                 Main.sendToServer(load);
-            } catch (HttpClientErrorException e) {
-                System.err.println("Error when contacting the server. Trying again later.");
+            } catch (Exception e) {
+                System.err.println("Error contacting the server. Trying again later.");
             }
 
             try {
@@ -54,7 +54,7 @@ public class Main {
     }
 
 
-    public static void sendToServer(double load) throws HttpClientErrorException {
+    public static void sendToServer(double load) throws Exception {
         RestTemplate restTemplate = new RestTemplate();
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_FORM_URLENCODED);
