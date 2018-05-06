@@ -14,11 +14,15 @@ public class Application {
 
     public static void main(String[] args) {
         current_loads = new HashMap<>();
+        populateCurrentLoads();
+        SpringApplication.run(Application.class, args);
+    }
+
+    private static void populateCurrentLoads() {
         double load = 0;
         for(int id = 0; id < 11; id++) {
             current_loads.put(id, load);
             load += 10;
         }
-        SpringApplication.run(Application.class, args);
     }
 }

@@ -5,21 +5,16 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="stylesheet" href="/css/style.css"/>
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css"/>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="/js/index.js"></script>
 </head>
 <body>
-
-
 <div id="txt_container">
     <label for="amount">cpu load range:</label>
     <input type="text" id="amount" style="border: 0; color: #f6931f; font-weight: bold;" />
 </div>
-
 <div id="slider-range"></div>
-
 <table id="load-table">
     <tr>
         <th onclick="sortTable(0)">id</th>
@@ -30,11 +25,5 @@
         <td th:text="${load.value}"></td>
     </tr>
 </table>
-
-<script>
-
-</script>
-
-
 </body>
 </html>
